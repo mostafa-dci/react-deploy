@@ -46,7 +46,12 @@ const Theme = () => {
           <Form.Label> Select Theme</Form.Label>
           <Form.Select
             value={theme.name}
-            onChange={(e) => setTheme(allThemes[e.target.value])}
+            onChange={(e) => {
+              // set the theme state
+              setTheme(allThemes[e.target.value])
+              // store the theme in Local storage
+              localStorage.setItem("currentTheme", JSON.stringify(allThemes[e.target.value]))
+            }}
           >
             {Object.keys(allThemes).map((th, index) => {
               return (

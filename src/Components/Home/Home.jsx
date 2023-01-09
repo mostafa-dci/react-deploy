@@ -6,7 +6,7 @@ const Home = ()=>{
         <div className="Home">
             <Container>
                 <h1>Home Component</h1>
-                <p>All You need To know, just search</p>
+                <p>All You need To know, just search.</p>
             </Container>
         </div>
     )
